@@ -36,6 +36,11 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 })
 
+// Not Found Page (route). Must be always at the end of all routes
+app.get("*", (req, res) => {
+    res.render("notfound");
+})
+
 
 app.listen(8000, () => {
     console.log("Server is running on port 8000");  
